@@ -98,6 +98,12 @@
     <Compile Include="Screens\RetrievePlaylist.Designer.cs">
       <DependentUpon>RetrievePlaylist.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\RetrieveTorrent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\RetrieveTorrent.Designer.cs">
+      <DependentUpon>RetrieveTorrent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs" />
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -113,6 +119,9 @@
     </Compile>
     <EmbeddedResource Include="Screens\RetrievePlaylist.resx">
       <DependentUpon>RetrievePlaylist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\RetrieveTorrent.resx">
+      <DependentUpon>RetrieveTorrent.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

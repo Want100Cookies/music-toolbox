@@ -46,6 +46,7 @@
             this.btn_get_torrent_files.TabIndex = 0;
             this.btn_get_torrent_files.Text = "Get torrent files";
             this.btn_get_torrent_files.UseVisualStyleBackColor = true;
+            this.btn_get_torrent_files.Click += new System.EventHandler(this.btn_get_torrent_files_Click);
             // 
             // btn_retrieve_playlist
             // 
