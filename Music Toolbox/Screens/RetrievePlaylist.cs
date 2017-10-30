@@ -67,7 +67,6 @@ namespace Music_Toolbox.Screens
                             TrackName = recentTrack.Name,
                             ArtistName = recentTrack.ArtistName,
                             AlbumName = recentTrack.AlbumName,
-                            TimePlayed = recentTrack.TimePlayed.ToString(),
                             NoPlays = 1
                         });
                     }

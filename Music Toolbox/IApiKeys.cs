@@ -4,5 +4,6 @@
     {
         string GetLastfmApiKey();
         string GetLastfmApiSecret();
+        string GetJackettApiKey();
     }
 }
