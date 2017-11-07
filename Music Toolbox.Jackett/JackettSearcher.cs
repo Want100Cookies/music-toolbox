@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net;
-using System.ServiceModel.Syndication;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
-using Argotic.Syndication;
+using xTools.Xom;
 
-namespace Music_Toolbox
+namespace Music_Toolbox.Jackett
 {
     public class JackettSearcher
     {
@@ -40,7 +39,7 @@ namespace Music_Toolbox
             }
         }
 
-        public void Search(string query, string indexer)
+        public async void Search(string query, string indexer)
         {
             if (string.IsNullOrEmpty(query) || !Indexers.TryGetValue(indexer, out Uri indexerUri))
             {
@@ -49,16 +48,18 @@ namespace Music_Toolbox
 
             Uri fullQuery = new Uri($"{indexerUri}?apikey={_apiKey}&t=search&q={query}");
 
-            RssFeed feed = new RssFeed();
-            WebClient client = new WebClient();
-            XmlReader reader = XmlReader.Create(client.OpenRead(fullQuery) ?? throw new InvalidOperationException());
-            feed.Load(reader);
-            // Todo: fix navigatore null exception
+            WebClient webClient = new WebClient();
+            string xml = await webClient.DownloadStringTaskAsync(fullQuery);
+            Element rss = Element.Parse(xml);
+            Element channel = rss[0];
 
-            foreach (RssItem item in feed.Channel.Items)
+            foreach (Element item in channel["item"])
             {
-                Debug.Print(item.Title);
+                string title = item["title"][0].StringValue;
+                string url = item["guid"][0].StringValue;
+                string magnet = item["link"][0].StringValue;
             }
+
         }
     }
 }

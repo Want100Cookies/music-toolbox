@@ -1,9 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Music Toolbox", "Music Toolbox.csproj", "{E73D04CD-654A-4373-9114-3994CE131D61}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6B1B6B55-8F56-4092-9A9A-1D0224B86268} = {6B1B6B55-8F56-4092-9A9A-1D0224B86268}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xTools.Xom", "..\..\..\Desktop\xTools.Xom\xTools.Xom.csproj", "{6B1B6B55-8F56-4092-9A9A-1D0224B86268}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Music Toolbox.Jackett", "..\Music Toolbox.Jackett\Music Toolbox.Jackett.csproj", "{DCBE5F3D-2E35-4C79-96BC-B7163D4FCF24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +22,14 @@ Global
 		{E73D04CD-654A-4373-9114-3994CE131D61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E73D04CD-654A-4373-9114-3994CE131D61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E73D04CD-654A-4373-9114-3994CE131D61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B1B6B55-8F56-4092-9A9A-1D0224B86268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B1B6B55-8F56-4092-9A9A-1D0224B86268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B1B6B55-8F56-4092-9A9A-1D0224B86268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B1B6B55-8F56-4092-9A9A-1D0224B86268}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCBE5F3D-2E35-4C79-96BC-B7163D4FCF24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCBE5F3D-2E35-4C79-96BC-B7163D4FCF24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCBE5F3D-2E35-4C79-96BC-B7163D4FCF24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCBE5F3D-2E35-4C79-96BC-B7163D4FCF24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
